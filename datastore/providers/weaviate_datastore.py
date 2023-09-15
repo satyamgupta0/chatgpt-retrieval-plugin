@@ -275,6 +275,7 @@ class WeaviateDataStore(DataStore):
         if delete_all:
             logger.debug(f"Deleting all vectors in index {WEAVIATE_CLASS}")
             self.client.schema.delete_all()
+            self.client.schema.create_class(SCHEMA)
             return True
 
         if ids:
