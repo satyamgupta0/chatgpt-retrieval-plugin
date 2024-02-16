@@ -25,3 +25,9 @@ export CHUNK_SIZE=1000
 In the upstream version, when using Weaviate and issuing a delete all request, the plugin will delete not only
 the documents but also the corresponding schema. In the forked version we resolve this by recreating the schema
 automatically after a delete all operation.
+
+# Simple deployment for testing
+
+In order to run this in a quick prepackaged environment, together with GraphDB, you can use the bundled
+`docker-compose.yml`. This will start GraphDB, Weaviate and the retrieval plugin on ports 7200, 8080 and 8000.
+Remember to set your GPT key and the `BEARER_TOKEN` in the `docker-compose.yml`, as per our documentation.
